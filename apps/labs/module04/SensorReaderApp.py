@@ -11,7 +11,7 @@ from time import sleep
 
 senseHatAdaptor = I2CSenseHatAdaptor.I2CSenseHatAdaptor()
 senseHatAdaptor.daemon = True
-print("Start I2CSenseHatAdaptor thread!")
+print("Starting system performance app daemon thread...")
 
 senseHatAdaptor.enableEmulator = True
 senseHatAdaptor.start()

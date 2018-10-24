@@ -47,19 +47,23 @@ class I2CSenseHatAdaptor(threading.Thread):
 #Get the Data by using read function. fllowing 3 function is using 
     def displayAccelerometerData(self):
         accelData = i2cBus.read_i2c_block_data(accelAddr, begAddr, totBytes)
-        print("here is the Accel show: " + accelData)
+        print("Accelerometer: ")
+        print(accelData)
 
     def displayPressureData(self):
         pressureData = i2cBus.read_i2c_block_data(pressAddr, begAddr, totBytes)
-        print("here is the Pressure: " + pressureData)
+        print("Pressure: ")
+        print(pressureData)
         
     def displayHumidityData(self):
         humiData = i2cBus.read_i2c_block_data(humidAddr, begAddr, totBytes)
-        print("here is the Humidity: " + humiData)
+        print("Humidity: ")
+        print(humiData)
 
     def displayMagnetometerData(self):
         magData = i2cBus.read_i2c_block_data(magAddr, begAddr, totBytes)
-        print("here is the magData: " + magData)
+        print("Orientation: ")
+        print(magData)
 
 
 #Run methods above and print the data on the console, the inteval is 5 seconds.
